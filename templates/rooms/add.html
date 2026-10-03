@@ -1,0 +1,24 @@
+
+{% extends 'base.html' %}
+{% block content %}
+<div class="card shadow-sm">
+  <div class="card-body">
+    <h4 class="mb-3">Add Room</h4>
+    <form method="post">
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label class="form-label">Room No</label>
+          <input name="room_no" class="form-control" required>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Capacity</label>
+          <input name="capacity" type="number" min="1" value="1" class="form-control" required>
+        </div>
+      </div>
+      <div class="d-grid">
+        <button class="btn btn-success">Add Room</button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

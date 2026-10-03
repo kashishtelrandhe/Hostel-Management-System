@@ -1,0 +1,39 @@
+
+{% extends 'base.html' %}
+{% block content %}
+<div class="card shadow-sm">
+  <div class="card-body">
+    <h4 class="mb-3">Edit Student</h4>
+    <form method="post">
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label class="form-label">Name</label>
+          <input name="name" class="form-control" required value="{{ student.name }}">
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Email</label>
+          <input name="email" class="form-control" value="{{ student.email }}">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label class="form-label">Phone</label>
+          <input name="phone" class="form-control" value="{{ student.phone }}">
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Room</label>
+          <select name="room_id" class="form-control">
+            <option value="">-- None --</option>
+            {% for r in rooms %}
+              <option value="{{ r.id }}" {% if r.id == student.room_id %}selected{% endif %}>{{ r.room_no }} ({{ r.occupied }}/{{ r.capacity }})</option>
+            {% endfor %}
+          </select>
+        </div>
+      </div>
+      <div class="d-grid">
+        <button class="btn btn-primary">Save Changes</button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

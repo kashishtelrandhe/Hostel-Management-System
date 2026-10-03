@@ -1,0 +1,19 @@
+
+/* Custom styles to make UI nicer */
+:root{
+  --brand1: #0d6efd;
+  --brand2: #375a7f;
+}
+.bg-gradient-primary{
+  background: linear-gradient(90deg, var(--brand1), #6610f2);
+}
+body{
+  background: #f6f8fb;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+.card{ border-radius: 12px; }
+.table thead th{ border-bottom: 0; }
+.btn-primary, .btn-success, .btn-warning {
+  border-radius: 8px;
+}
+.footer { margin-top: 40px; }
